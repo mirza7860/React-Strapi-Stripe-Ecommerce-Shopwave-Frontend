@@ -7,12 +7,14 @@ const Products = () => {
   const catId = parseInt(useParams().id);
   const [maxPrice, setmaxPrice] = useState(1000);
   const [sort, setsortid] = useState("asc");
+
+  
   const [selectedsubcats, setselectedsubcats] = useState([]);
 
   const { data, loading, error } = useFetch(
     `/sub-categories?filters[categories][id][$eq]=${catId}`
   );
-
+  console.log(data);
   const handleChange = (e) => {
     const value = e.target.value;
     const isChecked = e.target.checked;
@@ -22,6 +24,7 @@ const Products = () => {
         : selectedsubcats.filter((item) => item !== value)
     );
   };
+  console.log(selectedsubcats);
   return (
     <div className="products">
       <div className="left">
