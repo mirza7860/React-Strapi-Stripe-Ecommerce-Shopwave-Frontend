@@ -27,13 +27,13 @@ function Navbar() {
             <KeyboardArrowDownIcon />
           </div>
           <div className="item">
-            <Link className="link" to="/products/1">Women</Link>
+            <Link className="link" to="/products/3">Women</Link>
           </div>
           <div className="item">
-            <Link className="link" to="/products/1">Men</Link>
+            <Link className="link" to="/products/2">Men</Link>
           </div> 
           <div className="item">
-            <Link className="link" to="/products/1">Children</Link>
+            <Link className="link" to="#">Children</Link>
           </div>
         </div>
         <div className="centre">
