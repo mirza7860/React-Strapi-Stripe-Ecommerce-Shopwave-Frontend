@@ -2,11 +2,14 @@ import Card from "../Card/Card";
 import "../List/List.scss";
 import useFetch from "../../Hooks/useFetch";
 const List = ({subCats,maxPrice,sort,catId}) => {
-  const { data, loading, error } = useFetch(
-    `/products?populate=*&[filters][categories][id][$eq]=${catId}${subCats.map(
-      (item) => `&[filters][sub_categories][id][$eq]=${item}&`
-    )}[filters][price][$lte]=${maxPrice}&sort=price:${sort}`
-  );
+const subCategoriesParam = subCats
+  .map((item) => `[filters][sub_categories][id][$eq]=${item}`)
+  .join("&");
+
+const apiUrl = `/products?populate=*&[filters][categories][id][$eq]=${catId}&${subCategoriesParam}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`;
+
+const { data, loading, error } = useFetch(apiUrl);
+
   return (
     <div className="List">
       {loading
