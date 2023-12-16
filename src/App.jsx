@@ -22,7 +22,7 @@ const Layout=()=>{
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "https://shopwave-ecommerce.onrender.com/",
     element: <Layout />,
     children: [
       {
@@ -42,11 +42,11 @@ const router = createBrowserRouter([
         element:<ProductsNA />,
       },
       {
-        path:"?success=true",
+        path:"/?success=true",
         element:<Home />,
       },
       {
-        path:"?success=false",
+        path:"/?success=false",
         element:<Home />,
       },
        {
