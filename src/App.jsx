@@ -39,7 +39,19 @@ const router = createBrowserRouter([
       },
       {
         path:"/products/na",
-        element:<ProductsNA />
+        element:<ProductsNA />,
+      },
+      {
+        path:"?success=true",
+        element:<Home />,
+      },
+      {
+        path:"?success=false",
+        element:<Home />,
+      },
+       {
+        path:"/*",
+        element:<Home />,
       }
     ],
   },
