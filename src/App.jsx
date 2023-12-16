@@ -55,7 +55,7 @@ const router = createBrowserRouter([
       }
     ],
   },
-],{basename:"https://shopwave-ecommerce.onrender.com/"});
+],{basename:"https://shopwave-ecommerce.onrender.com"});
 
 
 
