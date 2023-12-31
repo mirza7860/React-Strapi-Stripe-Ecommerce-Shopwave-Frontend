@@ -23,6 +23,8 @@ const Cart = () => {
       await stripe.redirectToCheckout({
         sessionId: res.data.stripeSession.id,
       });
+      
+      window.location.href = "https://shopwave-ecommerce.onrender.com"
     } catch (err) {
       console.log(err);
     }
